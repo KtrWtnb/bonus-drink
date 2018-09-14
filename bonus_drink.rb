@@ -3,12 +3,9 @@ class BonusDrink
     if amount < 3
       amount
     elsif amount % 3 == 0
-      bonus = amount / 3
-      amount + bonus
+      amount + amount.div(3)
     else
-      bonus = amount / 3
-      mod = amount % 3
-      amount + bonus + mod
+      amount + amount.div(3) + amount.modulo(3)
     end
   end
 end
